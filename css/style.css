@@ -284,6 +284,44 @@ main section{
     background-color: #d3eaf4;
 }
 
+/*INICIO FOOTER*/
+footer{
+    color: #ffffff;
+    background-color: #013d5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem 0rem;
+}
+.footer-cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-card{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lista-redes-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+}
+
+.lista-redes-footer img{
+    width: 50px;
+}
+
+/*FIM FOOTER*/
+
 /*Tratando da responsividade*/
 
 @media (max-width: 980px){
