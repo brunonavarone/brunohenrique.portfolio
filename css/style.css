@@ -1,26 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #F7F8FA;
     font-family: 'IBM Plex Mono', monospace, sans-serif;
 }
 
 
-nav{
-    background-color: #2E4049; 
+nav {
+    background-color: #2E4049;
     height: 53px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    font-size: 1.2rem;  
+    font-size: 1.2rem;
     position: relative;
-    z-index: 1000; /* Z-index alto para garantir que o cabeçalho fique acima de outros elementos */  
+    z-index: 1000;
+    /* Z-index alto para garantir que o cabeçalho fique acima de outros elementos */
 }
 
 /* Estilos adicionais para o menu fixo */
@@ -31,56 +32,56 @@ nav{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.redes-sociais, .paginacao{
+.redes-sociais, .paginacao {
     list-style: none;
     display: flex;
     flex-direction: row;
 }
 
-.redes-sociais{
+.redes-sociais {
     gap: 1rem;
     padding-left: 2rem;
 }
 
-.redes-sociais img{
+.redes-sociais img {
     width: 27px;
 }
 
-.menu-mobile{
+.menu-mobile {
     cursor: pointer;
     display: none;
 }
 
-.menu-mobile div{
+.menu-mobile div {
     width: 32px;
     height: 2px;
     background: #fff;
     margin: 8px;
 }
 
-.paginacao{
+.paginacao {
     gap: 2rem;
     padding-right: 2rem;
 }
 
-.paginacao a{
+.paginacao a {
     color: white;
     text-decoration: none;
 }
 
-.paginacao a:hover{
+.paginacao a:hover {
     border-bottom: solid 2px white;
-    
+
 }
 
-.apresentacao-header-container{
+.apresentacao-header-container {
     background-color: #567787;
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
     display: flex;
 }
 
-.card-apresentacao{
+.card-apresentacao {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -88,16 +89,16 @@ nav{
     margin-left: auto;
     margin-right: auto;
     gap: 3rem;
-   
+
 }
 
-.card-apresentacao img{
+.card-apresentacao img {
     width: 240px;
     max-height: 240px;
     border-radius: 3px;
 }
 
-.card-texto-apresentacao{
+.card-texto-apresentacao {
     color: white;
     width: 50%;
     display: flex;
@@ -107,23 +108,23 @@ nav{
     font-size: 1.2rem;
 }
 
-.card-texto-apresentacao h3{
+.card-texto-apresentacao h3 {
     font-size: 1.6rem;
 }
 
-main section{
+main section {
     margin-top: 3rem;
 }
 
-main section h2, main section p{
+main section h2, main section p {
     text-align: center;
 }
 
-main section p{
+main section p {
     margin-top: 1.5rem;
 }
 
-.habilidades-card-container{
+.habilidades-card-container {
     margin-top: 3rem;
     flex-wrap: wrap;
     display: flex;
@@ -132,7 +133,7 @@ main section p{
     gap: 5rem;
 }
 
-.card-habilidade{
+.card-habilidade {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,21 +147,21 @@ main section p{
 }
 
 
-.card-habilidade ul{
+.card-habilidade ul {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
 /*SECTION DE PROJETOS*/
-#projetos{
+#projetos {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container-cards-projetos{
-    
+.container-cards-projetos {
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -170,7 +171,7 @@ main section p{
     margin-top: 2rem;
 }
 
-.card-projetos{
+.card-projetos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,63 +182,63 @@ main section p{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.card-projetos img{
+.card-projetos img {
     max-width: 300px;
 }
 
-.container-links-projetos{
+.container-links-projetos {
     display: flex;
     flex-direction: column;
 }
 
-.container-links-projetos a{
+.container-links-projetos a {
     text-decoration: none;
     color: #013d5c;
     font-weight: 500;
     font-size: 1rem;
 }
 
-.container-links-projetos a:hover{
+.container-links-projetos a:hover {
     border-bottom: 2px dotted rgb(11, 11, 111);
 }
 
 /*FIM DA SECTION PROJETOS*/
 
 /*INICIO DA SECTION CONTATO*/
-#emailForm{
+#emailForm {
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
 }
 
-#contato{
+#contato {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#emailForm textarea{
+#emailForm textarea {
     resize: none;
 }
 
 /*FIM DA SECTION CONTATO*/
-#botao-topo img{
+#botao-topo img {
     width: 50px;
     border-radius: 50px;
 }
 
-#botao-topo img:hover{
+#botao-topo img:hover {
     background-color: #d3eaf4;
 }
 
 /*Tratando da responsividade*/
 
-@media (max-width: 999px){
-    body{
+@media (max-width: 999px) {
+    body {
         overflow-x: hidden;
     }
 
-    .paginacao{
+    .paginacao {
         position: absolute;
         top: 8vh;
         right: 0;
@@ -251,25 +252,28 @@ main section p{
         padding: 0px;
 
     }
-    .paginacao li{
+
+    .paginacao li {
         margin-left: 0;
         opacity: 1;
     }
-    .menu-mobile{
+
+    .menu-mobile {
         display: block;
     }
 
-    .paginacao.active{
+    .paginacao.active {
         transform: translateX(0);
     }
 }
 
-@keyframes navLinkFade{
-    from{
+@keyframes navLinkFade {
+    from {
         opacity: 0;
         transform: translateX(50px);
     }
-    to{
+
+    to {
         opacity: 2;
         transform: translateX(0);
     }
