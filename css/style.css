@@ -4,7 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
+html, body{
+  scroll-behavior: smooth;
+}
+
+body{
     background-color: #F7F8FA;
     font-family: 'IBM Plex Mono', monospace, sans-serif;
 }
@@ -38,13 +42,14 @@ nav {
     flex-direction: row;
 }
 
-.redes-sociais {
-    gap: 1rem;
-    padding-left: 2rem;
+.redes-sociais{
+    gap: 1.25rem;
+    padding-left: 1.5rem;
 }
 
-.redes-sociais img {
-    width: 27px;
+.redes-sociais img{
+    width: 37px;
+    border-radius: 50px;
 }
 
 .menu-mobile {
@@ -67,6 +72,7 @@ nav {
 .paginacao a {
     color: white;
     text-decoration: none;
+    padding: 5px;
 }
 
 .paginacao a:hover {
@@ -89,7 +95,6 @@ nav {
     margin-left: auto;
     margin-right: auto;
     gap: 3rem;
-
 }
 
 .card-apresentacao img {
@@ -106,6 +111,7 @@ nav {
     gap: 0.5rem;
     align-self: center;
     font-size: 1.2rem;
+    /* text-align: justify; */
 }
 
 .card-texto-apresentacao h3 {
@@ -116,12 +122,24 @@ main section {
     margin-top: 3rem;
 }
 
-main section h2, main section p {
+/* main section h2, main section p{
+    text-align: center;
+} */
+
+/* main section p{
+    margin-top: 1.5rem;
+} */
+
+#habilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-main section p {
-    margin-top: 1.5rem;
+#habilidades p{
+    width: 80%;
+    text-align: justify;
 }
 
 .habilidades-card-container {
@@ -144,14 +162,58 @@ main section p {
     height: 280px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 100ms ease-in-out;
 }
 
 
 .card-habilidade ul {
     display: flex;
     flex-direction: column;
+    align-items: left;
+    text-align: left;
     gap: 0.5rem;
+    list-style: square;
 }
+/*INICIO SECTION FORMACAO*/
+
+#formacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d1e6f071;
+    padding: 2rem 0rem;
+}
+
+.card-formacao-container{
+    margin-top: 1.5rem;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card-formacao{
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 100ms ease-in-out;
+}
+
+.card-formacao h3{
+    text-align: left;
+}
+
+/*FINAL SECTION FORMACAO */
 
 /*SECTION DE PROJETOS*/
 #projetos {
@@ -180,6 +242,7 @@ main section p {
     background-color: #e6f0f6;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 100ms ease-in-out;
 }
 
 .card-projetos img {
@@ -189,6 +252,7 @@ main section p {
 .container-links-projetos {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .container-links-projetos a {
@@ -204,24 +268,9 @@ main section p {
 
 /*FIM DA SECTION PROJETOS*/
 
-/*INICIO DA SECTION CONTATO*/
-#emailForm {
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
+.card-habilidade:hover, .card-formacao:hover, .card-projetos:hover {
+    transform: scale(1.03);
 }
-
-#contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#emailForm textarea {
-    resize: none;
-}
-
-/*FIM DA SECTION CONTATO*/
 #botao-topo img {
     width: 50px;
     border-radius: 50px;
@@ -231,16 +280,61 @@ main section p {
     background-color: #d3eaf4;
 }
 
+/*INICIO FOOTER*/
+footer{
+    color: #ffffff;
+    background-color: #283840;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem 0rem;
+}
+.footer-cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-card{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.footer-card a{
+    color: #fff;
+}
+
+.lista-redes-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+}
+
+.lista-redes-footer img{
+    width: 50px;
+    border-radius: 50px;
+}
+
+/*FIM FOOTER*/
+
 /*Tratando da responsividade*/
 
-@media (max-width: 999px) {
-    body {
+@media (max-width: 980px){
+    body{
         overflow-x: hidden;
     }
 
     .paginacao {
         position: absolute;
-        top: 8vh;
+        top: 53px;
         right: 0;
         width: 40vw;
         background-color: #2E4049;
@@ -249,7 +343,9 @@ main section p {
         justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.6s ease-in;
-        padding: 0px;
+        padding: 30px 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
 
     }
 
@@ -267,8 +363,28 @@ main section p {
     }
 }
 
-@keyframes navLinkFade {
-    from {
+@media (max-width: 660px){
+    .card-apresentacao{
+        flex-direction: column;
+    }
+
+    .card-texto-apresentacao p:last-child{
+        text-align: justify;
+    }
+
+    .card-texto-apresentacao{
+        width: 80%;
+    } 
+}
+
+@media (max-width: 420px){
+    .footer-card-solo{
+        text-align: center;
+    }
+}
+
+@keyframes navLinkFade{
+    from{
         opacity: 0;
         transform: translateX(50px);
     }
